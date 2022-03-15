@@ -4,4 +4,4 @@ pandas==1.3.4
 pandas_read_xml==0.3.1
 requests==2.26.0
 whitenoise==5.2.0
-waitress==5.2.0
+waitress==2.1.0
