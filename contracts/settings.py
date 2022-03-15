@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "0#qa!#n+w#&t6=r@87ht3x*nav2*##7(fslu(^p&_u@5nq+vo@" #os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["hydrauleaks.herokuapp.com"]
 
