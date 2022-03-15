@@ -25,7 +25,7 @@ SECRET_KEY = "0#qa!#n+w#&t6=r@87ht3x*nav2*##7(fslu(^p&_u@5nq+vo@" #os.environ['S
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["hydrauleaks.herokuapp.com"]
 
 
 # Application definition
