@@ -10,7 +10,7 @@ import shutil
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'seao_download_home.html')
 
 
 def annual(request):

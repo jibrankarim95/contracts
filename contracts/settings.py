@@ -25,7 +25,7 @@ SECRET_KEY = "0#qa!#n+w#&t6=r@87ht3x*nav2*##7(fslu(^p&_u@5nq+vo@" #os.environ['S
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["hydrauleaks.herokuapp.com"]
+ALLOWED_HOSTS = ["hydrauleaks.herokuapp.com","127.0.0.1"]
 
 
 # Application definition
@@ -36,7 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles'
+    'django.contrib.staticfiles',
+    'seao_connect.apps.SeaoConnectConfig',
+    'contractinterface.apps.ContractinterfaceConfig'
 ]
 
 MIDDLEWARE = [
@@ -78,8 +80,11 @@ WSGI_APPLICATION = 'contracts.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'seao_connect',
+        'USER': 'postgres',
+        'PASSWORD': 'Guitars.1995',
+        'HOST': 'localhost'
     }
 }
 
@@ -119,7 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'assets/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'assets')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR,STATIC_URL)]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type

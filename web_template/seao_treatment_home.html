@@ -73,20 +73,12 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Seao Connect</h1>
-                <p>Data Upload</p>
+                <p>Data Treatment</p>
 
-                    <form method="post" action="seao_data_result" enctype="multipart/form-data" class="form-group newsletter-group2">
-                        <input type="file" name="keyword" id="keyword" class="form-control" placeholder="Keyword" required>
-                        <br>
-                        <label>
-                        <input list="frequency" name="frequency" class="form-control" placeholder="Data Frequency" required></label>
-                        <datalist id="frequency">
-                            <option value="History">
-                            <option value="Recent">
-                        </datalist>
+                        <button class="btn btn-border" onclick="window.location='seao_download'" >Data Treatment</button>
 
-                        <button class="btn btn-border" type="submit">Upload</button>
-                    </form><!-- /.newsletter-group -->
+                        <button class="btn btn-border" onclick="window.location='seao_upload'" >Data Upload</button>
+
 
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->

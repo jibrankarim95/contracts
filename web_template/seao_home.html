@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Hydrauleaks</title>
+    <title>SeaoConnect</title>
 
     <meta name="description" content="">
     <meta name="author" content="">
@@ -53,30 +53,14 @@
 
                 <div class="navbar-header">
                    
-                    <a class="site-title"><span>Hydrau</span>Leaks</a>
+                    <a class="site-title"><span>Welcome, </span>{{first_name}}</a>
 
                 </div><!-- /.navbar-header -->
 
                 <div class="collapse navbar-collapse" id="agency-navbar-collapse">
 
                     <ul class="nav navbar-nav navbar-right">
-
-
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Treatment<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
-
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                              <li><a href="annual">Annual</a></li>
-                              <li><a href="monthly">Monthly</a></li>
-                              <li><a href="weekly">Weekly</a></li>
-                              <li><a href="">Combine Files</a></li>
-                            </ul>
-
-                        </li>
-                        <li><a href="annual">Annual</a></li>
-                        <li><a href="monthly">Monthly</a></li>
-                        <li><a href="weekly">Weekly</a></li>
-                        <li><a href="">Combine Files</a></li>
-
+                        <li><a href="seao_logout">Logout</a></li>
                     </ul>
 
                 </div>
@@ -88,9 +72,25 @@
     <div id="hero" class="hero overlay">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Tender Data Treatment System</h1>
-                <p>One stop solution for Canadian Tenders</p>
-                <a href="#" class="btn btn-border">Learn more</a>
+                <h1>Seao Connect</h1>
+                <p>Online Public Tender Database</p>
+
+                    <form method="post" action="seao_data_result" enctype="multipart/form-data" class="form-group newsletter-group2">
+                        <input type="text" name="keyword" id="keyword" class="form-control" placeholder="Keyword" required>
+                        <input type="date" name="publication_date" id="publication_date" class="form-control"  required>
+
+
+                        <br>
+                        <label>
+                        <input list="frequency" name="frequency" class="form-control" placeholder="Data Frequency" required></label>
+                        <datalist id="frequency">
+                            <option value="History">
+                            <option value="Recent">
+                        </datalist>
+
+                        <button class="btn btn-border" type="submit">Generate</button>
+                    </form><!-- /.newsletter-group -->
+
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->
     </div><!-- /.hero -->
