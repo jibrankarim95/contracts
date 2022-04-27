@@ -1,27 +1,27 @@
 /*
- * Theme Name: 
- * Theme URI: 
+ * Theme Name:
+ * Theme URI:
  * Author: Milan Savov, Nikola Kostov
  * Author URI/Mail: milan.savov@gmail.com, nikolakostov1991@gmail.com
  * Version: 1.0
  * */
 
- /* TABLE OF CONTENT 
+ /* TABLE OF CONTENT
 *
 * - CUSTOM RESETS
     - Buttons
     - Forms
 * - LAYOUT
-* - HEADER 
+* - HEADER
     - Site Logo
     - Navigation
 * - HERO (BANNER)
 * - HOMEPAGE SECTIONS
-    - Features 
+    - Features
     - Services
-    - Map Feature 
+    - Map Feature
     - Portfolio
-    - Newsletter 
+    - Newsletter
 * - FOOTER
 * - PAGES
     - PORTFOLIO
@@ -73,7 +73,7 @@ h1,h2,h3,h4,h5 {
 }
 
 p + p {
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 /* Buttons */
@@ -110,7 +110,7 @@ p + p {
 
 .btn-green {
     background-color: #6fc754;
-    color: #fff;  
+    color: #fff;
 }
 
 .btn:hover,
@@ -124,11 +124,11 @@ button.btn:focus {
 .btn-gray:hover,
 .btn-gray:focus {
     background-color: #6fc754;
-    color: #fff;    
+    color: #fff;
 }
 
-/* 
- * Forms 
+/*
+ * Forms
  */
 /* Input fields */
 .form-group {
@@ -187,7 +187,7 @@ input[type=radio] {
 
 .checkbox {
     margin: 0;
-} 
+}
 
 .checkbox + .checkbox,
 .radio-btn + .radio-btn {
@@ -205,8 +205,8 @@ input[type=radio] {
 .checkbox [type="checkbox"]:checked + label:before {
     content: '';
     position: absolute;
-    left:0; 
-    width: 20px; 
+    left:0;
+    width: 20px;
     height: 20px;
     background-color: #fff;
     border: 1px solid #f5f5f8;
@@ -294,7 +294,7 @@ input[type=radio] {
 .radio-btn [type="radio"]:checked + label:before {
     content: '';
     position: absolute;
-    left:0; 
+    left:0;
     top: 50%;
     width: 20px;
     height: 20px;
@@ -403,7 +403,7 @@ select {
 
 .bootstrap-select.open .dropdown-menu {
     display: block;
-    border: 1px solid #26272d; 
+    border: 1px solid #26272d;
     border-radius: 10px;
 }
 
@@ -433,7 +433,7 @@ select {
     border-top: 6px dashed;
     border-top: 6px solid\9;
     border-right: 6px solid transparent;
-    border-left: 6px solid transparent;   
+    border-left: 6px solid transparent;
 }
 
 .bootstrap-select .selected {
@@ -535,8 +535,8 @@ select {
 .accordion .panel-heading a.collapsed:hover,
 .accordion.accordion-gray .panel-heading a.collapsed:hover,
 .accordion .panel-heading a {
-    background-color: #6fc754;   
-    color: #fff; 
+    background-color: #6fc754;
+    color: #fff;
 }
 
 .accordion .panel-heading a.collapsed::after {
@@ -556,7 +556,7 @@ select {
     -webkit-transform: translateY(-50%);
 }
 
-.panel-group .panel-heading+.panel-collapse>.list-group, 
+.panel-group .panel-heading+.panel-collapse>.list-group,
 .panel-group .panel-heading+.panel-collapse>.panel-body {
     border: none;
 }
@@ -656,7 +656,7 @@ html, body {
 }
 
 .site-title:hover {
-    color: #26272d;   
+    color: #26272d;
 }
 
 .site-title span {
@@ -677,7 +677,7 @@ html, body {
     display: inline-block;
 }
 
-.navbar-nav > li > a, 
+.navbar-nav > li > a,
 .slicknav_nav > li > a {
     padding: 0;
     font-size: 16px;
@@ -699,17 +699,17 @@ html, body {
     margin-left: 30px;
 }
 
-.nav .open > a, 
-.nav .open > a:focus, 
+.nav .open > a,
+.nav .open > a:focus,
 .nav .open > a:hover,
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus,
 .navbar-nav > li.active > a,
 .navbar-collapse li a:hover,
-.dropdown.open > a, 
+.dropdown.open > a,
 .site-header-white .dropdown.open > a,
-.dropdown-menu a:hover, 
-.dropdown:hover > a, 
+.dropdown-menu a:hover,
+.dropdown:hover > a,
 .dropdown-menu>li>a:focus,
 .dropdown-menu li a:hover,
 .slicknav_nav > li.active a,
@@ -778,8 +778,8 @@ html, body {
 
 /* HERO
 ================================================== */
-.hero { 
-    background: url(../img/hero.jpg) no-repeat center / cover; 
+.hero {
+    background: url(../img/hero.jpg) no-repeat center / cover;
     height: 100%;
     width: 100%;
     display: table;
@@ -809,6 +809,8 @@ html, body {
     margin: 0 auto;
     padding: 0 15px;
     text-align: center;
+    margin-top: -150px
+    ;
 }
 
 .hero-text h1 {
@@ -818,7 +820,7 @@ html, body {
 
 .hero-text p {
     position: relative;
-    margin: 45px 0 30px;
+    margin: 20px 0 30px;
     font-size: 20px;
     color: #26272d;
 }
@@ -874,199 +876,25 @@ html, body {
 }
 
 .portfolio-hero {
-    background: url(../img/portfolio-hero.jpg) no-repeat center / cover;     
+    background: url(../img/portfolio-hero.jpg) no-repeat center / cover;
 }
 
 .blog-hero {
-    background: url(../img/blog-hero.jpg) no-repeat center / cover;     
+    background: url(../img/blog-hero.jpg) no-repeat center / cover;
 }
 
 .contact-hero {
-    background: url(../img/contact-hero.jpg) no-repeat center / cover;     
+    background: url(../img/contact-hero.jpg) no-repeat center / cover;
 }
 
-/* SITEMAIN
-================================================== */
-/* site-section */
-.site-section {
-   padding: 100px 0 140px;
-}
-
-.subheading-text {
-    font-size: 20px;
-    font-style: italic;
-}
-
-.heading-separator {
-    position: relative;
-    margin: 0;
-    padding-bottom: 70px;
-}
-
-.heading-separator:after {
-    content: "";
-    position: absolute;
-    bottom: 25px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    width: 50px;
-    margin: 0 auto;
-    background-color: #267df4;
-}
-
-/* Section: Features */
-.section-features h2 {
-    padding-bottom: 40px;
-    font-size: 30px;
-}
-
-.section-features img {
-    position: absolute;
-    right: 15px;
-    height: 380px;
-}
-
-/* Section: Services */
-.section-services .subheading-text {
-    margin-bottom: 90px;
-}
-
-.section-services .col-md-3:nth-child(n+5) .service {
-    margin-top: 60px;
-}
-
-.service {
-    min-height: 250px;
-}
-
-.service-title {
-    margin: 35px 0 25px;
-    font-size: 13px;
-    text-transform: uppercase;
-}
-
-.service-info {
-    font-size: 13px; 
-}
-
-/* Section: Map Feature */
-.section-map-feature {
-    padding-top: 250px;
-    background: #071021 url(../img/map.png) no-repeat top center / cover; 
-}
-
-.section-map-feature h2 {
-    padding-bottom: 30px;
-    margin: 0;
-}
-
-.section-map-feature h2,
-.section-map-feature p {
-    color: #fff;
-}
-
-.section-map-feature .btn {
-    margin: 80px 0 215px;
-}
-
-.counter {
-    margin-bottom: 30px;
-    font-size: 40px;
-    font-weight: 300;
-    line-height: 1;
-}
-
-.counter-item h3 {
-    margin: 0;
-    font-size: 16px;
-    color: #0960d7;
-}
-
-/* Section: Portfolio */
-.portfolio-item {
-    margin-top: 30px;
-}
-
-.portfolio-item {
-    height: 270px;
-    position: relative;
-}
-
-.portfolio-item:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 100%;
-    bottom: 0;
-    background-color: #f5f5f8;
-    transition: right 0.25s ease-in-out;
-    -moz-transition: right 0.25s ease-in-out;
-    -webkit-transition: right 0.25s ease-in-out;
-    -o-transition: right 0.25s ease-in-out;
-    -ms-transition: right 0.25s ease-in-out;
-}
-
-.portfolio-item:hover:before {
-    right: 25%;
-}
-
-.portfolio-item-title,
-.portfolio-item a {
-    position: absolute;
-    left: 0px;
-    margin: 0;
-    font-size: 16px;
-    opacity: 0;
-}
-
-.portfolio-item-title {
-    width: 150px; 
-    top: 15px;  
-    transition: left 0.25s ease-in-out, opacity 0.25s ease-in-out;
-    -moz-transition: left 0.25s ease-in-out, opacity 0.25s ease-in-out;
-    -webkit-transition: left 0.25s ease-in-out, opacity 0.25s ease-in-out;
-    -o-transition: left 0.25s ease-in-out, opacity 0.25s ease-in-out;
-    -ms-transition: left 0.25s ease-in-out, opacity 0.25s ease-in-out;
-}
-
-.portfolio-item:hover .portfolio-item-title {
-    left: 15px;
-    opacity: 1;
-}
-
-.portfolio-item a {
-    bottom: 15px;
-    color: #26272d;
-    padding: 5px 12px;
-    border: 1px solid #26272d;
-    border-radius: 50px;
-}
-
-.portfolio-item:hover a {
-    left: 55%;
-    opacity: 1;
-}
-
-.portfolio-item a:hover {
-    background-color: #26272d;
-    color: #fff;
-}
-
-.portfolio-item a i {
-    width: 16px;
-    text-align: center;
-}
-
-/* Section: Newsletter */
+/* Section: Button and input form */
 .section-newsletter h2 {
     padding-bottom: 30px;
     margin: 0;
 }
 
 .newsletter-group {
-    max-width: 550px;
+    max-width: 350px;
 }
 
 .newsletter-group .form-control {
@@ -1074,14 +902,27 @@ html, body {
 }
 
 .newsletter-group .btn {
-    min-width: 120px;
+    min-width: 100px;
 }
 
+.newsletter-group2 {
+    max-width: 400px;
+}
+
+.newsletter-group2 .form-control {
+    padding-right: 125px;
+    max-height: 40px;
+}
+
+.newsletter-group2 .btn {
+    margin-top: 10px;
+    min-width: 200px;
+}
 /* FOOTER
 ================================================== */
 .site-footer {
     background-color: #f5f5f8;
-    padding-top: 95px;
+    padding-top: 30px;
 }
 
 .site-footer .site-title {
@@ -1096,11 +937,11 @@ html, body {
 }
 
 .site-footer > .container {
-    padding-bottom: 170px;
+    padding-bottom: 10px;
 }
 
 .site-footer .list-unstyled li + li {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .contact-links li {
@@ -1167,7 +1008,7 @@ html, body {
 
 a.twitter-bg {
     color: #55acee;
-    border-color: #55acee; 
+    border-color: #55acee;
 }
 
 a.twitter-bg:hover {
@@ -1186,11 +1027,11 @@ a.facebook-bg:hover{
 a.pinterest {
   color: #dd4b39;
   border-color: #dd4b39;
-} 
+}
 
 a.pinterest:hover{
   background-color: #dd4b39;
-} 
+}
 
 a.linkedin-bg {
   color: #007bb5;
@@ -1231,7 +1072,7 @@ a.linkedin-bg:hover {
     color: #fff;
 }
 
-/* 
+/*
  * Portfolio
  */
 .portfolio-sorting li:nth-child(-n+3){
@@ -1246,8 +1087,8 @@ a.linkedin-bg:hover {
 
 .portfolio-sorting li .active {
     background-color: #6fc754;
-    color: #fff;  
-    box-shadow: none;   
+    color: #fff;
+    box-shadow: none;
 }
 
 #grid {
@@ -1268,7 +1109,7 @@ a.linkedin-bg:hover {
     opacity: 0.3;
 }
 
-/* 
+/*
  * Portfolio-item
  */
 .project-img {
@@ -1296,7 +1137,7 @@ a.linkedin-bg:hover {
 
 .project-date-category p span {
     font-size: 14px;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     color: #26272d;
     font-weight: 400;
 }
@@ -1315,7 +1156,7 @@ a.linkedin-bg:hover {
     padding-top: 0;
 }
 
-/* 
+/*
  * Blog
  */
 .blog-post + .blog-post {
@@ -1349,7 +1190,7 @@ a.linkedin-bg:hover {
 }
 
 .post-content a {
-    color: #8c8f94;   
+    color: #8c8f94;
 }
 
 .post-content .read-more {
@@ -1361,7 +1202,7 @@ a.linkedin-bg:hover {
 .post-content .read-more:after {
     content: '';
     display: block;
-    background-color: #8c8f94;  
+    background-color: #8c8f94;
     width: 20px;
     height: 2px;
     position: absolute;
@@ -1375,7 +1216,7 @@ a.linkedin-bg:hover {
 }
 
 .post-content .read-more:hover:after {
-    background-color: #6fc754; 
+    background-color: #6fc754;
 }
 
 .blog-post a:hover + .post-content .post-title a,
@@ -1424,7 +1265,7 @@ a.linkedin-bg:hover {
     margin-top: 60px;
 }
 
-/* 
+/*
  * Blog post
  */
 /* Post Comments */
@@ -1512,7 +1353,7 @@ a.linkedin-bg:hover {
     font-size: 18px;
     margin: 0 0 30px;
     text-transform: uppercase;
-    letter-spacing: 1px;   
+    letter-spacing: 1px;
 }
 
 .widget .list-unstyled a:hover {
@@ -1533,7 +1374,7 @@ a.linkedin-bg:hover {
     border-top: 1px solid rgba(38,41,44,0.05)
 }
 
-/* 
+/*
  * Contact
  */
 /* Section: Contact-us */
@@ -1549,7 +1390,7 @@ a.linkedin-bg:hover {
     margin: 0 0 10px 20px;
     color: #26292c;
     font-size: 16px;
-    font-weight: 300; 
+    font-weight: 300;
 }
 
 .section-contact-us textarea {
