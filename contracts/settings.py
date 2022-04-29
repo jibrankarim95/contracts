@@ -26,7 +26,7 @@ SECRET_KEY = "0#qa!#n+w#&t6=r@87ht3x*nav2*##7(fslu(^p&_u@5nq+vo@"
 DEBUG = True
 
 ALLOWED_HOSTS = ["hydrauleaks.herokuapp.com","127.0.0.1"]
-CSRF_TRUSTED_ORIGINS = ["hydrauleaks.herokuapp.com","127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = ["https://hydrauleaks.herokuapp.com","127.0.0.1"]
 
 
 # Application definition
