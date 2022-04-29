@@ -100,6 +100,8 @@ def seao_data_result(request):
         publication_date = request.POST['publication_date']
         frequency = request.POST['frequency']
 
+        print(publication_date)
+
         user = settings.DATABASES['default']['USER']
         password = settings.DATABASES['default']['PASSWORD']
         database_name = settings.DATABASES['default']['NAME']
@@ -112,9 +114,9 @@ def seao_data_result(request):
         con = engine.raw_connection()
         query_string = ''
         if frequency == 'Recent':
-            query_string = 'Select * from weekly_data where lower(tender_title) like \'%%'+keyword+'%%\' and date = \''+publication_date+'\''
+            query_string = 'Select * from weekly_data where lower(tender_title) like \'%%'+keyword+'%%\' and left(to_char(date,\'yyyy-mm-dd\'),7) = \''+publication_date+'\''
         elif frequency == 'History':
-            query_string = 'Select * from annual_data where lower(titre) like \'%%'+keyword+'%%\' and date(datepublication) = \''+publication_date+'\''
+            query_string = 'Select * from annual_data where lower(titre) like \'%%'+keyword+'%%\' and left(to_char(date(datepublication),\'yyyy-mm-dd\'),7) = \''+publication_date+'\''
         cur = con.cursor()
         print(query_string)
         cur.execute(query_string)
