@@ -26,6 +26,7 @@ SECRET_KEY = "0#qa!#n+w#&t6=r@87ht3x*nav2*##7(fslu(^p&_u@5nq+vo@"
 DEBUG = True
 
 ALLOWED_HOSTS = ["hydrauleaks.herokuapp.com","127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = ["hydrauleaks.herokuapp.com","127.0.0.1"]
 
 
 # Application definition
@@ -46,7 +47,7 @@ MIDDLEWARE = [
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    #'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
