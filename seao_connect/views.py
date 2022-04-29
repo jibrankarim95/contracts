@@ -30,8 +30,6 @@ def seao_upload(request):
         user = auth.authenticate(username=email, password=password1)
 
         if user is None:
-            ##messages.info(request, 'Incorrect Credentials')
-            ##messages.success(request, 'You are Logged in')
             return redirect('upload_login')
         elif user is not None and user.is_staff == False:
             return redirect('upload_login')
