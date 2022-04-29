@@ -76,6 +76,7 @@
                 <p>Data Upload</p>
 
                     <form method="post" action="seao_upload_data" enctype="multipart/form-data" class="form-group newsletter-group2">
+                        {% csrf_token %}
                         <input type="file" name="file" id="file" class="form-control" placeholder="File" required>
                         <br>
                         <label>

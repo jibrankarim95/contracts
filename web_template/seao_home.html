@@ -76,6 +76,7 @@
                 <p>Online Public Tender Database</p>
 
                     <form method="post" action="seao_data_result" enctype="multipart/form-data" class="form-group newsletter-group2">
+                        {% csrf_token %}
                         <input type="text" name="keyword" id="keyword" class="form-control" placeholder="Keyword" required>
                         <input type="month" name="publication_date" id="publication_date" class="form-control"  required>
 
