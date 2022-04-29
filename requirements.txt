@@ -6,3 +6,4 @@ requests==2.26.0
 SQLAlchemy==1.4.22
 psycopg2==2.9.3
 waitress==2.1.0
+whitenoise==5.2.0
