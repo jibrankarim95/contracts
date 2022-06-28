@@ -49,8 +49,8 @@ def seao_upload_data(request):
         user = settings.DATABASES['default']['USER']
         password = settings.DATABASES['default']['PASSWORD']
         database_name = settings.DATABASES['default']['NAME']
-
-        database_url = 'postgresql://{user}:{password}@ec2-3-230-238-86.compute-1.amazonaws.com:5432/{database_name}'.format(
+        #database_url = 'postgresql://{user}:{password}@ec2-3-230-238-86.compute-1.amazonaws.com:5432/{database_name}'.format
+        database_url = 'postgresql://{user}:{password}@localhost:5432/{database_name}'.format(
             user=user,
             password=password,
             database_name=database_name,
@@ -93,6 +93,7 @@ def seao_home(request):
             return render(request, 'seao_home.html', {'first_name': first_name})
 
 def seao_data_result(request):
+    import json
     if request.method == 'POST':
         keyword = request.POST['keyword']
         publication_date = request.POST['publication_date']
@@ -103,7 +104,8 @@ def seao_data_result(request):
         user = settings.DATABASES['default']['USER']
         password = settings.DATABASES['default']['PASSWORD']
         database_name = settings.DATABASES['default']['NAME']
-        database_url = 'postgresql://{user}:{password}@ec2-3-230-238-86.compute-1.amazonaws.com:5432/{database_name}'.format(
+        #database_url = 'postgresql://{user}:{password}@ec2-3-230-238-86.compute-1.amazonaws.com:5432/{database_name}'.format
+        database_url = 'postgresql://{user}:{password}@localhost:5432/{database_name}'.format(
             user=user,
             password=password,
             database_name=database_name,
@@ -121,7 +123,12 @@ def seao_data_result(request):
         cur.execute(query_string)
         df = DataFrame(cur.fetchall(), columns = [desc[0] for desc in cur.description])
         df = pd.DataFrame(df)
-        result = df.to_html(index=False)
+        json_records = df.reset_index().to_json(orient='records')
+        data = []
+        data = json.loads(json_records)
+        context = {'d': data}
+        return render(request, 'test.html', context)
+        #result = df.to_html(index=False)
 
 
         con.close()

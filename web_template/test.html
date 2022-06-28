@@ -1,33 +1,201 @@
-{% load static %}
-
+={% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+    <!-- Basic Page Needs
+    ========================================s========== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>SeaoConnect</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Favicon
+    ================================================== -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon.png">
+
+
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 <body>
 
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
 
-<table>
-  <tr>
-        <th>Date</th>
-      <th>Party_name</th>
-  </tr>
-  <tr>
-    {% for value in table.values %}
-        <td>
-         {% for v in value %}
-           {{v}}
-         {% endfor %}
-       </td>
+                <div class="navbar-header">
+
+                    <a class="site-title"><span>Welcome, </span>{{first_name}}</a>
+
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="seao_logout">Logout</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div >
+
+
+<table >
+    <thead>
+      <tr>
+        <th>id</th>
+<th>date</th>
+<th>party_0_name</th>
+<th>party_0_address_locality</th>
+<th>party_1_name</th>
+<th>party_1_role</th>
+<th>party_1_details_NEQ</th>
+<th>buyer_name</th>
+<th>tender_title</th>
+<th>tender_items_classification_description</th>
+<th>tender_procurement_Method</th>
+<th>tender_procurement_Method_Details</th>
+<th>tender_additional_Procurement_Categories</th>
+<th>tender_tenderer_name</th>
+<th>awards_date</th>
+<th>awards_value_amount</th>
+    <th>contracts_value_amount</th>
+
+      </tr>
+    </thead>
+    <tbody>
+    <!-- jinja2 Technique -->
+    {% if d %}
+    {% for i in d %}
+      <tr>
+        <td>{{i.id}}</td>
+<td>{{i.date}}</td>
+<td>{{i.party_0_name}}</td>
+<td>{{i.party_0_address_locality}}</td>
+<td>{{i.party_1_name}}</td>
+<td>{{i.party_1_role}}</td>
+<td>{{i.party_1_details_NEQ}}</td>
+<td>{{i.buyer_name}}</td>
+<td>{{i.tender_title}}</td>
+<td>{{i.tender_items_classification_description}}</td>
+<td>{{i.tender_procurement_Method}}</td>
+<td>{{i.tender_procurement_Method_Details}}</td>
+<td>{{i.tender_additional_Procurement_Categories}}</td>
+<td>{{i.tender_tenderer_name}}</td>
+<td>{{i.awards_date}}</td>
+<td>{{i.awards_value_amount}}</td>
+<td>{{i.contracts_value_amount}}</td>
+
+      </tr>
     {% endfor %}
-  </tr>
-</table>
+    {% endif %}
+    </tbody>
+  </table>
 
 
 
+
+
+
+
+
+    </div><!-- /.hero -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a class="site-title"><span>Hydrau</span>leaks</a>
+                    <p>We're a digital agency focused on creative and results-driven solutions.</p>
+                    <p>We measure our success by the results we drive for our clients.</p>
+                </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <h3>Keep in touch</h3>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@agencyperfect.com">info@agencyperfect.com</a></li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i><p>20 Leo, Armenia</p></li>
+                    </ul>
+                </div>
+                <div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class=""><a href="index.html">Home</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Porfolio</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="copyright">
+            <div class="container">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <a class="twitter-bg" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="facebook-bg" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a>
+                            <a class="linkedin-bg" href="#"><i class="fa fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p>&copy; Hydrauleaks</p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/bootstrap-select.min.js"></script>
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/jquery.countTo.min.js"></script>
+    <script src="./assets/js/jquery.shuffle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 
 </body>
 </html>
